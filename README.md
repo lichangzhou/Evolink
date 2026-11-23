@@ -374,6 +374,15 @@ server you are running against — fill those in, they are what makes a report
 actionable. General questions belong in Discussions rather than Issues, so bug reports
 stay readable.
 
+### Reach me directly
+
+If Issues or Discussions don't work for you, contact me directly:
+
+| Channel | Contact |
+|---|---|
+| Email | `1543079796@qq.com` |
+| QQ | `1543079796` |
+
 ⚠️ **Never paste cookies, API keys, `data/config.json` or your `.strm` contents into an
 issue.** Redact them first.
 
