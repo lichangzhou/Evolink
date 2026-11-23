@@ -25,7 +25,31 @@ body:
         - Docker Compose
         - Docker run
         - source
-      validations:
+    validations:
+      required: true
+  - type: dropdown
+    id: arch
+    attributes:
+      label: Host architecture
+      options:
+        - linux/amd64
+        - linux/arm64
+        - other
+    validations:
+      required: true
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Media server
+      description: Which backend is this happening with?
+      options:
+        - Emby
+        - Jellyfin
+        - Plex
+        - Playable
+        - multiple
+        - none / not applicable
+    validations:
       required: true
   - type: textarea
     id: what
