@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install markdownlint
+        run: npm install -g markdownlint-cli
+      - name: Lint markdown files
+        run: markdownlint "**/*.md" --ignore node_modules
+
+  syntax:
+    name: Python syntax
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile all sources
+        run: python3 -m compileall -q app tools 2>/dev/null || python3 -m compileall -q app
+
+  secrets:
+    name: No secrets committed
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure runtime data is not tracked
+        run: |
+          if git ls-files | grep -E '^(data/|.*config\.json$|.*\.(db|sqlite3)$)'; then
+            echo "::error::Runtime data or config files must not be committed."
+            exit 1
+          fi
+      - name: Scan for hardcoded credentials
+        run: |
+          if git grep -nEi '(ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,})' -- . ; then
+            echo "::error::A GitHub token appears to be committed."
+            exit 1
+          fi
+          echo "no token found"

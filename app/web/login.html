@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EvoLink · 登录</title>
+<style>
+:root{
+  --text:#f0f4fa; --muted:#8d99ad; --muted2:#647186;
+  --brand:#4d86ff; --brand-lit:#7aa8ff; --ok:#42d392; --danger:#ff6b6b;
+  --glass:rgba(255,255,255,.055); --glass2:rgba(255,255,255,.085);
+  --brd:rgba(255,255,255,.10); --brd-lit:rgba(255,255,255,.22);
+  --hi:inset 0 1px 0 rgba(255,255,255,.20);
+  --shadow:0 8px 32px rgba(0,0,0,.45), 0 2px 8px rgba(0,0,0,.3);
+  --blur:blur(12px) saturate(150%);
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{
+  background:#05080e; color:var(--text);
+  font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden; position:relative;
+}
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.orb{position:fixed;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none}
+.orb.a{width:52vw;height:52vw;left:-10vw;top:-14vw;background:radial-gradient(circle,#2f5fe0bb,transparent 68%);animation:d1 26s ease-in-out infinite}
+.orb.b{width:46vw;height:46vw;right:-8vw;top:2vw;background:radial-gradient(circle,#7a4fe0a8,transparent 68%);animation:d2 32s ease-in-out infinite}
+.orb.c{width:54vw;height:54vw;left:22vw;bottom:-26vw;background:radial-gradient(circle,#0e8fa0a0,transparent 70%);animation:d3 38s ease-in-out infinite}
+@keyframes d1{0%,100%{transform:translate(0,0)}50%{transform:translate(6vw,4vh)}}
+@keyframes d2{0%,100%{transform:translate(0,0)}50%{transform:translate(-5vw,6vh)}}
+@keyframes d3{0%,100%{transform:translate(0,0)}50%{transform:translate(4vw,-5vh)}}
+
+.card{
+  position:relative; z-index:2; width:min(400px,92vw);
+  padding:30px 28px 26px; border-radius:22px;
+  background:var(--glass); border:1px solid var(--brd);
+  backdrop-filter:var(--blur); -webkit-backdrop-filter:var(--blur);
+  box-shadow:var(--hi),var(--shadow);
+}
+.brand{display:flex;align-items:center;gap:11px;margin-bottom:4px}
+.logo{
+  width:40px;height:40px;border-radius:12px;flex:0 0 auto;
+  background:linear-gradient(135deg,#4d86ff,#7a4fe0);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:17px;color:#fff;letter-spacing:-.02em;
+  box-shadow:0 4px 14px rgba(77,134,255,.35);
+}
+.title{font-size:17px;font-weight:700;letter-spacing:.01em}
+.sub{color:var(--muted);font-size:12px;margin:0 0 20px 51px;letter-spacing:.02em}
+label{display:block;font-size:12px;color:var(--muted);margin:0 0 6px 2px;letter-spacing:.04em}
+input{
+  width:100%; height:42px; padding:0 13px; margin-bottom:13px;
+  border-radius:11px; font:inherit; color:var(--text);
+  background:rgba(255,255,255,.05); border:1px solid var(--brd);
+  outline:none; transition:.18s;
+}
+input::placeholder{color:var(--muted2)}
+input:focus{border-color:var(--brand); background:rgba(77,134,255,.10); box-shadow:0 0 0 3px rgba(77,134,255,.16)}
+button{
+  width:100%; height:44px; margin-top:4px; border-radius:12px; border:none;
+  font:inherit; font-weight:650; color:#fff; cursor:pointer;
+  background:linear-gradient(135deg,#4d86ff,#6a6cf0);
+  box-shadow:0 4px 16px rgba(77,134,255,.30); transition:.18s;
+}
+button:hover{filter:brightness(1.08); transform:translateY(-1px)}
+button:active{transform:translateY(0)}
+button:disabled{opacity:.6; cursor:default; transform:none}
+.msg{min-height:20px;margin-top:12px;font-size:12.5px;text-align:center;color:var(--danger)}
+.msg.ok{color:var(--ok)}
+.hint{
+  margin-top:14px; padding:10px 12px; border-radius:11px;
+  background:rgba(255,255,255,.035); border:1px solid var(--brd);
+  color:var(--muted); font-size:12px; line-height:1.7;
+}
+.hint b{color:var(--text)}
+.hint code{
+  background:rgba(255,255,255,.07); padding:1px 6px; border-radius:5px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:11.5px;
+}
+.foot{margin-top:14px;text-align:center;color:var(--muted2);font-size:11px}
+</style>
+</head>
+<body>
+<div class="orb a"></div><div class="orb b"></div><div class="orb c"></div>
+
+<div class="card">
+  <div class="brand">
+    <div class="logo">EV</div>
+    <div>
+      <div class="title">EvoLink</div>
+    </div>
+  </div>
+  <p class="sub">影视库缺口比对 · 请先登录</p>
+
+  <form id="f" autocomplete="on">
+    <label for="u">账号</label>
+    <input id="u" name="username" type="text" autocomplete="username" placeholder="admin" autofocus>
+    <label for="p">密码</label>
+    <input id="p" name="password" type="password" autocomplete="current-password" placeholder="admin">
+    <button id="b" type="submit">登 录</button>
+  </form>
+
+  <div class="msg" id="m"></div>
+
+  <div class="hint">
+    默认账号 <b>admin</b>、密码 <b>admin</b>。登录后可在
+    <b>设置 → 基础设置 → 登录账号与密码</b> 里修改，改完立即生效。
+  </div>
+  <div class="foot">EvoLink · 本机服务</div>
+</div>
+
+<script>
+(function(){
+  var f=document.getElementById('f'), u=document.getElementById('u'),
+      p=document.getElementById('p'), b=document.getElementById('b'), m=document.getElementById('m');
+  var next = new URLSearchParams(location.search).get('next') || '/';
+  // 只接受同源路径：排除以 // 开头的协议相对 URL（//evil.com 会被浏览器当 https://evil.com）
+  if(next.charAt(0)!=='/' || next.charAt(1)==='/') next='/';
+
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    m.className='msg'; m.textContent='';
+    if(!u.value.trim() || !p.value){ m.textContent='请输入账号和密码'; return; }
+    b.disabled=true; b.textContent='登录中…';
+    fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},
+                         body:JSON.stringify({user:u.value.trim(), pass:p.value})})
+      .then(function(r){ return r.json().then(function(j){ return {ok:r.ok, j:j}; }); })
+      .then(function(res){
+        if(res.ok && res.j && res.j.ok){ m.className='msg ok'; m.textContent='登录成功，正在进入…'; location.href=next; return; }
+        b.disabled=false; b.textContent='登 录';
+        m.textContent=(res.j && res.j.error) ? res.j.error : '登录失败';
+        p.value=''; p.focus();
+      })
+      .catch(function(){
+        b.disabled=false; b.textContent='登 录';
+        m.textContent='连接不上服务器，请确认服务在运行';
+      });
+  });
+})();
+</script>
+</body>
+</html>

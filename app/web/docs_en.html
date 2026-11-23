@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EvoLink User Guide</title>
+<link rel="icon" href="data:image/png;base64,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" sizes="any">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+  :root{
+    --bg:#0b1020; --bg2:#111a30; --card:#16203a; --card2:#1b2742;
+    --line:#26324f; --txt:#e7ecf6; --muted:#93a1c0; --muted2:#67748f;
+    --accent:#5b8cff; --accent2:#7c5cff; --ok:#5ad18a; --warn:#ffb454; --bad:#ff7a7a;
+    --code:#0e1730;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:linear-gradient(160deg,var(--bg),var(--bg2));color:var(--txt);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    line-height:1.75;font-size:15px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{display:flex;max-width:1180px;margin:0 auto;gap:28px;padding:0 20px}
+  nav.toc{position:sticky;top:0;align-self:flex-start;height:100vh;overflow:auto;
+    width:248px;flex:0 0 248px;padding:26px 0;border-right:1px solid var(--line)}
+  nav.toc .brand{display:flex;align-items:center;gap:10px;padding:0 20px 18px;font-weight:700;font-size:17px}
+  nav.toc .brand .mk{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));font-size:13px;font-weight:800;color:#fff}
+  nav.toc a{display:block;padding:7px 20px;color:var(--muted);font-size:13.5px;border-left:2px solid transparent}
+  nav.toc a:hover{color:var(--txt);text-decoration:none;background:rgba(91,140,255,.07)}
+  nav.toc a.sub{padding-left:34px;font-size:12.5px;color:var(--muted2)}
+  nav.toc a.active{color:var(--txt);border-left-color:var(--accent);background:rgba(91,140,255,.1)}
+  main{flex:1;min-width:0;padding:34px 0 120px}
+  .hero{padding:10px 0 26px;border-bottom:1px solid var(--line);margin-bottom:26px}
+  .hero h1{font-size:30px;margin:0 0 8px;background:linear-gradient(120deg,#fff,var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{color:var(--muted);margin:4px 0;max-width:760px}
+  .pill{display:inline-block;font-size:12px;color:var(--muted);border:1px solid var(--line);
+    border-radius:999px;padding:3px 11px;margin-right:8px}
+  h2{font-size:22px;margin:46px 0 12px;padding-top:14px;border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:none}
+  h3{font-size:17px;margin:26px 0 8px;color:#fff}
+  h4{font-size:15px;margin:18px 0 6px;color:#dfe7f5}
+  p{margin:10px 0}
+  ul,ol{margin:10px 0;padding-left:22px}
+  li{margin:6px 0}
+  code{background:var(--code);border:1px solid var(--line);border-radius:6px;padding:2px 6px;font-size:13px;color:#bcd0ff;font-family:"SFMono-Regular",Consolas,monospace}
+  pre{background:var(--code);border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow:auto;font-size:13px;line-height:1.6}
+  pre code{background:none;border:none;padding:0;color:#cfe0ff}
+  .card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);
+    border-radius:14px;padding:18px 20px;margin:16px 0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:16px 0}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .feat h4{margin:0 0 6px;font-size:15px;color:#fff}
+  .feat p{margin:0;font-size:13.5px;color:var(--muted)}
+  .note{border-left:3px solid var(--accent);background:rgba(91,140,255,.08);padding:12px 16px;border-radius:0 10px 10px 0;margin:16px 0}
+  .warn{border-left:3px solid var(--warn);background:rgba(255,180,84,.09)}
+  .danger{border-left:3px solid var(--bad);background:rgba(255,122,122,.09)}
+  .ok{border-left:3px solid var(--ok);background:rgba(90,209,138,.09)}
+  .tag{font-size:11px;padding:2px 8px;border-radius:6px;border:1px solid var(--line);color:var(--muted);margin-left:8px}
+  .tag.ok{background:rgba(80,200,140,.15);color:#6fe0a8;border-color:rgba(80,200,140,.3)}
+  .tag.no{background:rgba(255,160,80,.14);color:#ffb976;border-color:rgba(255,160,80,.3)}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:var(--card2);color:#fff}
+  td code{white-space:nowrap}
+  .kbd{display:inline-block;background:var(--card2);border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:1px 7px;font-size:12px}
+  footer{color:var(--muted2);font-size:12.5px;text-align:center;padding:30px 0}
+  @media(max-width:880px){nav.toc{display:none}.wrap{padding:0 16px}main{padding-top:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="toc">
+    <div class="brand"><span class="mk">EV</span><span>EvoLink Docs</span>
+      <a class="lang-switch" href="/static/docs.html" style="margin-left:auto;font-size:12px;font-weight:600;color:var(--accent);border:1px solid var(--line);padding:3px 9px;border-radius:999px">中文</a></div>
+    <a href="#intro">What is this</a>
+    <a href="#start">Getting Started</a>
+    <a href="#read">Reading the Numbers</a>
+    <a href="#nav">Section Overview</a>
+    <a href="#dash" class="sub">Dashboard</a>
+    <a href="#media" class="sub">Library / Index / Index Results</a>
+    <a href="#match" class="sub">Start Compare</a>
+    <a href="#pan" class="sub">Cloud Login / 302 Assistant</a>
+    <a href="#archive" class="sub">Archive &amp; Scrape</a>
+    <a href="#weight" class="sub">Weighted Dedup</a>
+    <a href="#classify" class="sub">Category Settings</a>
+    <a href="#webhook" class="sub">Delete Linkage</a>
+    <a href="#adv" class="sub">Cards &amp; Advanced Actions</a>
+    <a href="#settings" class="sub">Settings Item by Item</a>
+    <a href="#concepts">Core Concepts</a>
+    <a href="#deploy">Deployment &amp; Mounts</a>
+    <!-- EVOLINK:LICENSE:TOC -->
+    <a href="#license">License</a>
+    <!-- /EVOLINK:LICENSE:TOC -->
+    <a href="#faq">FAQ</a>
+    <a href="#glossary">Glossary</a>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <h1>EvoLink User Guide</h1>
+      <p>EvoLink does two things, aligning "the titles you want" with "your home media server (Emby / Jellyfin / Plex)":</p>
+      <p>
+        <span class="pill">Version v1.0</span>
+        <span class="pill">Supports Emby / Jellyfin / Plex</span>
+        <span class="pill">Supports the 115 cloud drive</span>
+      </p>
+    </div>
+
+    <h2 id="intro">What is this</h2>
+    <div class="grid">
+      <div class="feat"><h4>1. Compare missing titles</h4><p>Compare your "target release list" (from TMDB / third-party JP metadata source / third-party anime metadata source etc.) item by item against "what's already on your media server", to compute what you're missing and what's duplicated. The whole process is read-only against the media server; it never modifies, moves or deletes any file.</p></div>
+      <div class="feat"><h4>2. Cloud drive integration + 302 link swap</h4><p>Hook cloud-drive media into the media server via strm pointers; at playback EvoLink's proxy signs out a cloud direct link on the fly, the player pulls straight from the cloud CDN, and the media server neither relays nor stores the data.</p></div>
+      <div class="feat"><h4>3. Archive &amp; scrape</h4><p>Scan cloud directories, identify titles, match TMDB, and generate properly named strm by category - without touching original cloud files.</p></div>
+      <div class="feat"><h4>4. Auto-organize</h4><p>Weighted dedup (keep only the best of multiple versions), category settings, and delete linkage (deleting a title auto-cleans its strm) keep the media library clean and consistent.</p></div>
+    </div>
+
+    <h2 id="start">Getting Started</h2>
+    <h3>Step 0: one-time setup</h3>
+    <ol>
+      <li><b>Fill in TMDB API Key</b>: Settings -> Basic Settings. Register at themoviedb.org and copy the key under "Settings -> API".<b>The program pre-fills no Key; each person fills in their own</b>. The box shows <code>••••</code> means it's stored; if you don't want to change it, leave it; the badge on the right <span class="tag ok">Configured</span> / <span class="tag no">Not filled</span> is easy to spot. Leaving it empty only affects the six release categories (Movies/Shows/Anime/Documentary/Variety/Concert); local library browsing and hidden categories still work.</li>
+      <li><b>Fill in HTTP proxy</b>: on the same page. Fill in<b>: same page. Enter the host's LAN IP</b> + port (e.g. <code>192.168.1.10</code> / <code>7890</code>) and click "Test" to verify. The container uses host networking, so entering <code>127.0.0.1</code> points to the container itself and always fails. TMDB, Douban, third-party JP metadata source and posters all go through it; Emby and 115 are domestic services and connect directly.</li>
+      <li><b>Connect media server</b>: Settings -> Media Server (EMBY Settings). Address is <code>http://IP:8096</code>; the API Key is created in Emby admin under "Settings -> API Keys".<b>Must be generated with an admin account</b>: a normal account can only read libraries it's authorized for, which looks like "only one media library". Up to 3 servers supported.</li>
+      <li><b>Pick libraries for each category</b>: lower half of the same page. Click "Select" on the right of each category; multi-select. The numbers shown are<b>indexed item counts</b>, <code>0</code> ; 0 means not yet indexed, not that the library is empty. Libraries not assigned to any category join no stats and no comparison.</li>
+      <li><b>Log into cloud drives</b>: open "Cloud Drive Login" and log into your 115 account (login state persists in <code>data/</code>, survives restarts).</li>
+      <li><b>Configure mounts</b>: make sure those read-only directories are mounted correctly in compose (see "Deployment &amp; Mounts"); this is the prerequisite for 302 link-swap playback.</li>
+    </ol>
+    <h3>Step 1: build your target list</h3>
+    <p>You must first tell EvoLink "which titles I want" - these are the "releases / target list". Two sources:</p>
+    <ul>
+      <li><b>Fetch releases</b>: full fetch in reverse-year order x Emby library scope (TMDB / hidden categories via third-party JP metadata source / hidden categories via third-party anime metadata source / charts).</li>
+      <li><b>Index Emby</b>: brings in the<strong>existing</strong>: read in the items already on your media server (read-only).</li>
+      
+    </ul>
+    <h3>Step 2: run everything</h3>
+    <p>The "<b>Run Everything</b>" button at bottom-left runs in dependency order: Index Emby -> TMDB releases -> hidden-category IDs -> hidden category -> charts -> compare. First run takes ~10-20 min; six progress bars on the right move in real time (each independent, so you can see where it's stuck). When done, the home page has numbers.</p>
+    <div class="note">For first use, it's recommended to click "Index Emby" and "Start Compare" separately first, understand the numbers, then use Run Everything to avoid doing too much at once. Incremental fetches never flip "In Library" back to "Missing".</div>
+
+    <h2 id="read">Reading the Numbers</h2>
+    <p>This is the easiest part to misread; explained block by block below.</p>
+    <h3>Decade comparison table: see the gap at a glance</h3>
+    <p>After selecting any category (or subcategory), a table spreads across decades at the top: each row is<b>releases / local library / gap</b>. E.g. to see 2026 Western movies, click category "Movies" -> subcategory "Western Movies"; the 2026 row shows that year's numbers.<b>Click any row</b>and the list below shows only that year; click "All" to return to all decades. The three header cells switch along. Hidden categories use the same table (releases from third-party JP metadata source / third-party anime metadata source, local from Emby inventory).</p>
+    <h3>Two rows of numbers on the stats card</h3>
+    <p><b>Row 1 · Full releases</b></p>
+    <ul>
+      <li><b>Full releases</b>: how many were released this year in this category on TMDB. Reads only the total, no item downloads, so even old years return instantly.</li>
+      <li><b>Local Library</b>: your actual item count in Emby for this year.</li>
+      <li><b>Gap</b>: full releases - local library.</li>
+    </ul>
+    <p><b>Row 2 · Popular chart</b></p>
+    <ul>
+      <li><b>Popular chart</b>: actual list count of the top 500 by popularity (up to 500 per year per subcategory).</li>
+      <li><b>Already owned</b>: of those 500, how many you already have.</li>
+      <li><b>To fill</b>: of those 500, how many you're missing; click it to list only the missing.</li>
+    </ul>
+    <p>Both rows' "local" is the same number but compares against different things: row 1 against "all market releases", row 2 against "the 500 worth watching". The former shows how big the gap is; the latter decides what to fetch.</p>
+    <h3>View: Releases <-> Local Library</h3>
+    <p>The two "View" chips at the top:<b>Releases</b>show the target list,<b>Local Library</b>show actual Emby items. It only decides what<b>the list below</b>lists, not the decade table above (which gives both sets side by side).</p>
+    <h3>Why hidden category has 24999 local but only tens of thousands of releases</h3>
+    <p>Hidden-category releases come from two routes: third-party JP metadata source releases + monthly chart, and its studio-backfilled full history. Combined they still cap out - third-party JP metadata source anonymous access caps at ~3,200 items, and it only covers studios with a page. So "gap K" is always<b>what's missing from this list</b>, not "you're missing K in the world"; the fuller the list, the closer K is to reality.</p>
+    <h3>Five chips on the status row</h3>
+    <ul>
+      <li><b>All</b>: total releases</li>
+      <li><b>Missing</b>: in releases but not in your Emby</li>
+      <li><b>In Library</b>: in releases and found in library</li>
+      <li><b>Possible</b>: title close but ID/ID didn't match, needs manual confirm</li>
+      <li><b>Uncomparable</b>: too little info (no ID, no ID, no title)</li>
+    </ul>
+    <h3>Categories, subcategories &amp; filters</h3>
+    <p><b>Category</b>: Movies / Shows / Anime / Documentary / Variety / Concert / hidden category.<b>Subcategory</b>: Movies and Shows split into Mandarin / Asian / Western; Anime into Movie / Series; Variety and Concert into Mandarin / Foreign. Clicking a subcategory shows only that subcategory's releases; "Missing K / In Library" are computed per subcategory. Further down are Format / Genre / Region / Series / Library / Chart / Decade, narrowing layer by layer, always within "current category + current view". The number on a subcategory chip is the<b>release count</b>; hover shows "releases N (missing K) · local inventory M".</p>
+
+    <h2 id="nav">Section Overview</h2>
+    <p>The left sidebar is grouped by function; below each is explained "what it does, how to use it, common pitfalls".</p>
+
+    <h3 id="dash">Overview · Dashboard</h3>
+    <p>See core numbers at a glance: total releases, gap distribution (missing / in library / possible / uncomparable), background task status, and whether each reverse-proxy service is online.</p>
+    <ul>
+      <li><b>Gap distribution</b>: numbers are on the "releases basis" (your fetched target list), not media-server inventory; see the stats cards below for inventory.</li>
+      <li><b>Service &amp; reverse-proxy status</b>: see at a glance which 302 reverse-proxy entry (Emby / Jellyfin / Plex) is online and which is down.</li>
+      <li><b>One-click actions</b>: common actions are gathered here.</li>
+    </ul>
+
+    <h3 id="media">Library / Data · Index Libraries / Index Results</h3>
+    <ul>
+      <li><b>Media Library</b>: browse the managed media list, filter by category, release status and decade; more filters (charts &amp; release years) under "More Filters".</li>
+      <li><b>Index Emby (read-only)</b>: pull all library items into local SQLite, also recording resolution / bitrate / HDR / size (needed by "One-click dedup"). Full run ~40-90s. A single library failure only skips that library and continues; failures are summarized at the end, so one error no longer zeroes everything. Many libraries showing 0 in the picker just means not yet indexed; run "Index Emby" once.</li>
+    </ul>
+
+    <h3 id="match">Analyze · Start Compare</h3>
+    <p>Compare per media server by checking libraries, viewing<b>missing</b>and<b>duplicates</b>separately, with per-library progress. By default only compares<b>the checked libraries per category</b>: each hidden category only compares its own category's libraries; unchecked libraries never participate; enable "Cross-library fallback" to scan all Emby libraries.</p>
+    <h4>Four-level matching logic</h4>
+    <ul>
+      <li><b>Hidden-category IDs</b>: normalized to "letter-prefix + number" -<code>SSIS-378</code> / <code>SSIS378</code> / <code>SSIS-0378</code> / <code>SSIS-378-C</code> all equivalent; IDs are extracted from <code>av_code</code>, filename and path (Emby metadata sometimes mis-tags, so relying on one source misses some).</li>
+      <li><b>Hidden-category series names</b>: both sides strip studio brackets,<code>OVA</code> / <code>THE ANIMATION</code>, <code>＃1</code> / <code>episode N</code> / <code>vol.3</code>, then judge by exact match > substring > high similarity; having any episode locally counts as having the series.</li>
+      <li><b>TMDB / IMDb / TVDB ID</b> Exact match; those without ID fall back to "normalized title + year".</li>
+      <li><b>Possible track</b>: hidden-category IDs that don't match but share studio + near-identical title are marked "possible" (common when local IDs are mis-written by metadata or re-released as collections); not counted as "in library"; hover the card to see the basis.</li>
+    </ul>
+
+    <h3 id="pan">Cloud · Cloud Drive Login / 302 Assistant</h3>
+    <h4>Cloud Drive Login</h4>
+    <p>Log into the 115 cloud drive. After login, scan cloud directories and cross-check three ways against Emby inventory and releases: total cloud videos / also in Emby / cloud-only / not in releases either. Credentials are written only to local <code>data/config.json</code>; click "Log out" to clear immediately; 115 connects directly without a proxy.</p>
+    <div class="note warn"><b>Login rate limiting</b>: the cloud side limits login/code frequency. If it says "server temporarily rate-limited",<b>click Send Code only once</b>, wait a few minutes and retry; hammering it only lengthens the window. Login state persists, don't re-login repeatedly.</div>
+    <h4>302 Assistant</h4>
+    <p>Playback pipeline console, with three parts:</p>
+    <ul>
+      <li><b>STRM generation</b>: Add Link, Link Sync, Manual Sync - turn cloud files into strm pointers.</li>
+      <li><b>302 link swap</b>: configure each playback target's (Emby / Jellyfin / Plex) 302 reverse-proxy entry port and upstream.</li>
+      <li><b>302 logs</b>: the signing/link-swap record of each playback request; look here when debugging.</li>
+    </ul>
+
+    <h3 id="archive">Archive · Archive &amp; Scrape</h3>
+    <p>Turn "unorganized" cloud directories into a clean library the media server can scan directly: scan directory -> identify title -> match TMDB -> generate properly named <code>.strm</code>. </p>
+    <div class="note ok"><b>Safe</b>: archive &amp; scrape<strong>never moves or deletes</strong>original cloud files; it only adds strm pointers. To revert, just delete the generated strm.</div>
+
+    <h3 id="weight">Archive · Weighted Dedup</h3>
+    <p>The same title often has multiple versions on the cloud drive (4K REMUX / 1080p WEB-DL / Dolby Vision...). Weighted Dedup scores by your region/resolution/source/codec settings and keeps only the best version, so the media library doesn't fill up with duplicates of the same title.</p>
+    <ul>
+      <li>Plans are created/imported under "Weighted Dedup"<b>Create &amp; import</b>; </li>
+      <li>Leave empty means "keep all versions of the same title";</li>
+      <li>if unsure, click "Restore default weights" first.</li>
+    </ul>
+
+    <h3 id="classify">Archive · Category Settings</h3>
+    <p>Define how media is categorized:</p>
+    <ul>
+      <li><b>Category rules</b>: sort titles into folders like "Movies / Shows" by Chinese genre / region names;</li>
+      <li><b>Keyword replacement</b>: clean up messy release-group naming into tidy titles to improve TMDB match rate.</li>
+    </ul>
+    <div class="note">Category rules directly decide the first-level folder media goes into when archiving (e.g. "Movies", "Shows"); set them before running archive.</div>
+
+    <h3 id="webhook">Archive · Delete Linkage</h3>
+    <p>When a movie/show is deleted on the media server, EvoLink auto-cleans the corresponding <code>.strm</code> and empty folders, and tells the media server to remove the entry - keeping "cloud pointer" and "media library" always consistent, leaving no dead links.</p>
+    <div class="note">Delete isn't a hard delete: cleaned strm files first go to the recycle bin (<code>data/strm_trash/</code>) and are recoverable; confirm before emptying.</div>
+
+    <h3 id="adv">Cards &amp; Advanced Actions</h3>
+    <p>These features aren't in the left main bar, but in the media library's cards / stats cards / settings pages:</p>
+    <ul>
+      <li><b>Fetch releases (TMDB)</b>: full fetch in reverse-year order x Emby library scope, only checked categories and regions; years go from the newest in your library backwards. Each tier is stored immediately, checkpointed per tier, resumes after restart. Only accepts <code>vote_count ≥ 1</code> items.</li>
+      <li><b>Fetch hidden-category IDs (third-party JP metadata source)</b>: latest releases + monthly chart, only censored (JP). Pages adjustable under Basic Settings "hidden-category fetch pages". TMDB's coverage for this category is extremely low and has no ID field, so it must go through the third-party JP metadata source.</li>
+      <li><b>Fetch hidden category (third-party anime metadata source)</b>: an anime list,<b>key-free</b>, generally needs a proxy in mainland China. Collected by "series"; matching uses title-prefix so it won't cross into other series.</li>
+      <li><b>Fetch charts</b>: TMDB TOP250, Douban TOP250, trending, now/upcoming, Douban popular, and platform charts for Netflix / Disney+ / HBO Max / Prime Video / Apple TV+ / Hulu.<b>TOP250 is an all-time ranking</b>; each fetch takes the current snapshot's top 250 and auto-drops entries that fall out.</li>
+      <li><b>Warm posters</b>: bulk pre-fetch posters to disk (hidden category ~160k ~2GB; current category; all ~270k ~25GB). Cached ones are skipped; can be clicked repeatedly and stopped midway.<b>Must run while the proxy is available</b>. </li>
+      <li><b>Full resume (resumable fetch)</b>: fill all three routes up to target quotas without rescanning from scratch each time; completed tiers are skipped; existing library items only have metadata updated.</li>
+      <li><b>Export list</b>: top-right of the stats card; exports a CSV of the current filter scope (category+subcategory+status+year+genre...). Filter by "Missing" then export for a ready-to-fetch gap list.</li>
+      <li><b>One-click dedup</b>: scans only the current category's checked Emby libraries for duplicate titles (same tmdb_id / title+year / hidden category by ID).<b>Episodes count by episode</b>: different episodes aren't duplicates; only multiple bitrates of the same episode.<b>Read-only, no delete</b>; you decide which version to keep.</li>
+      <li><b>Card resource buttons</b>: <b>RE0</b>(film/TV) directly list that title's cloud resources on re0.me (115 / Quark / Ali / Baidu / 123 / Xunlei / magnet), via the fallback channel, by TMDB ID only;<b>Magnet</b>(hidden category) search sukebei + bt4g by ID. Already-owned titles can also be clicked to pick a 4K/high-bitrate version to upgrade.</li>
+      <li><b>Search</b>: the search box at top,<span class="kbd">⌘K</span> (Windows <span class="kbd">Ctrl+K</span>) focuses,<span class="kbd">Esc</span> clears. Matches Chinese name, original name and hidden-category ID simultaneously; searches as you type, results still constrained by current category and view.</li>
+    </ul>
+
+    <h3 id="settings">More · Settings Item by Item</h3>
+    <table>
+      <tr><th>Group</th><th>Function</th></tr>
+      <tr><td>Basic Settings</td><td>TMDB API Key, HTTP proxy (with test), re0.me address, third-party JP metadata source address, hidden-category fetch pages, RE0 direct (identity slots), fallback channel, data update, region weights, release rules, save status, run log</td></tr>
+      <tr><td>Media Server</td><td>Addresses, API Keys and library selection for Emby / Jellyfin / Plex (API Key must be generated with an admin account)</td></tr>
+      <tr><td>RE0 resource channel (fallback)</td><td>Fill in your own fallback channel address + account/password; clicking "Test RE0 channel" tries a lookup of "Dune: Part Two" to verify.<b>No need to log into TG here</b>: TG login happens on the aggregated search service side. When sharing the container with a friend, have them fill in their own fallback channel - whose you fill, whose resources are searched.</td></tr>
+      <tr><td>Data Update</td><td><b>Daily auto</b>Runs once daily at the set time in local timezone; if the container was off it catches up on next start;<b>Update Now</b>only runs checked items. Incremental fetches never flip "In Library" back to "Missing".</td></tr>
+      <tr><td>Cross-library fallback toggle</td><td>Off (default): strictly compare only checked libraries. On: a title in any library counts as owned, good for "titles scattered everywhere", but items from other categories may appear under "In Library".</td></tr>
+      <tr><td>Region weights / Release rules</td><td>Region weights decide how each category's count is split across 10 region tiers (min 1 per tier, 20 per page); each release rule row = one category + media type (movie / tv / both) + target total + sort + genre filter, add/remove as needed.</td></tr>
+      <tr><td>Save mechanism</td><td>Basic Settings auto-saves ~0.7s after a change; the button shows "Saved HH:MM:SS" - if you don't see it, it wasn't saved. The EMBY Settings block has its own save button. Config is triple-protected:<b>atomic writes</b> + <b>3 rolling backups</b> (<code>data/config.bak.1~3.json</code>) + <b>auto-recover from backup on corruption</b>. Upgrading the image or restarting the container never clears what you entered.</td></tr>
+    </table>
+    <div class="note">TG channel search (<code>t.me/s/channel?q=title</code>) only works for public channels with "web preview" enabled; those without it 302 to the channel home with no results and have been removed from cards and resource lists.</div>
+
+    <h2 id="concepts">Core Concepts</h2>
+    <h3>strm file</h3>
+    <p>A tiny text file of just a few bytes containing one line: the cloud file's path or pickcode. The media server scans it into the library as "one movie". At real playback, EvoLink's proxy reads that line to sign out a direct link.</p>
+    <h3>302 link swap</h3>
+    <p>A playback request first hits EvoLink's reverse-proxy entry; the proxy parses the strm -> requests and signs with the cloud -> returns <code>302</code> a redirect pointing the player to the cloud CDN direct link. So the media server<strong>relays no traffic</strong>, CPU/bandwidth load is near zero; the player connects straight to the cloud CDN at the same speed as the cloud client; Emby / Jellyfin / Plex each have their own 302 entry.</p>
+    <h3>Local mount mode</h3>
+    <p>EvoLink follows the path prefix written in the strm to the local CD2 (CloudDrive2) mount point to find the real file -<strong>it doesn't scan the whole cloud drive</strong>. So as long as the directory CD2 exposes on the NAS is mounted into the container <code>/CloudNAS</code>, the path prefix in the strm can be correctly recognized and stripped.</p>
+    <h3>Direct link</h3>
+    <p>The final cloud CDN link the 302 points to, with a time-limited signature; the player can stream from it directly.</p>
+
+    <h2 id="deploy">Deployment &amp; Mounts</h2>
+    <p>Container<strong>The internal target paths are fixed</strong>; you only need to change the<strong>left (host) path</strong>, to match your NAS. Examples for multiple systems are below,<b>no hard requirement - use what you're used to</b>. </p>
+    <table>
+      <tr><th>In-container (fixed, do not change)</th><th>Purpose</th><th>Host (left) example</th></tr>
+      <tr><td><code>/app/data</code></td><td>EvoLink's own data (config/database/tasks)</td><td>fnOS <code>/vol1/1000/docker/evolink/data</code> · Synology <code>/volume1/docker/evolink/data</code> · QNAP <code>/share/docker/evolink/data</code></td></tr>
+      <tr><td><code>/Link</code></td><td>strm library (read-only for proxy / read-write for management)</td><td>Where you actually put strm files; location is flexible</td></tr>
+      <tr><td><code>/CloudNAS</code></td><td>CD2 local mount point (fixed)</td><td>fnOS <code>/vol1/1000/CloudNAS</code> · Synology <code>/volume1/CloudNAS</code> · QNAP <code>/share/CloudNAS</code></td></tr>
+      <tr><td><code>/jellyfin_data</code> <code>/plex_data</code></td><td>Media server database (read-only, used by proxy to look up paths)</td><td>The <code>config/data</code> or <code>config</code> directory of the corresponding media</td></tr>
+      <tr><td><code>/emby_data</code></td><td>Emby database (read-only, used by delete linkage)</td><td>Emby's <code>data</code> directory of the corresponding media</td></tr>
+    </table>
+    <div class="note warn"><b>WAL trap</b>: the media server database uses WAL mode; when mounting you<strong>must mount the whole data directory</strong>, not just the main <code>.db</code> file, otherwise un-checkpointed transactions are missed and items are mis-judged as "missing from library".</div>
+    <div class="note warn"><b>CD2 propagation</b>: CD2 uses <code>shared</code> to propagate sub-mounts (CloudDrive) outward; consumers (Emby/Jellyfin/Plex) must also mount the<strong>same</strong>host path into their own <code>/CloudNAS</code> and use <code>rshared</code> to receive it, so all three ends' strm path prefixes match.</div>
+    <div class="note"><b>host networking</b>: EvoLink uses host networking, so there is no <code>ports</code> section - services bind directly to host ports (9191 for the admin UI; playback reverse-proxy entries are under "302 Assistant"). Change ports in the web UI, don't add ports in compose.</div>
+
+    <!-- EVOLINK:LICENSE:DOC -->
+    <h2 id="license">%License (Free / Pro)%</h2>
+    <p>%An unactivated EvoLink runs in <strong>Free</strong> mode: you can add all of your own media libraries (Emby / Jellyfin / Plex / Playable) and your 115 cloud drive, run four-source indexing, compare missing and duplicate items, and view every result. Free is read-only and never creates strm files or playback links.%</p>
+    <p>%For 302 link swap, strm generation, archive and scrape, weighted dedup, delete linkage, export, scheduled tasks and every other feature, activate <strong>Pro</strong>: a one-time buyout of <b>CNY 68</b>, valid forever for all current and future 1.x releases, with no subscription, renewal or trial counter.<span id="lic-av-note">Activation also unlocks the local AV library, the 里番 library, and code-based comparison.</span>%</p>
+    <p>%Enter the license key you purchased under License in the sidebar. The server decides the plan, with up to 2 devices per key. A short network outage is tolerated for 30 days after the last successful verification, after which the app falls back to Free. A missing license module or a failed verification also falls back to Free and never unlocks Pro features.%</p>
+
+    <!-- /EVOLINK:LICENSE:DOC -->
+    <h2 id="faq">FAQ</h2>
+    <h3>Many libraries show 0 in the picker</h3>
+    <p>Not yet indexed. Run "Index Emby" once.<code>0</code> is the "indexed item count", not live Emby inventory.</p>
+    <h3>Can only see one media library</h3>
+    <p>The API Key wasn't generated with an admin account. Go to Emby and create a new Key with an admin account.</p>
+    <h3>Fetching releases returns 401 / says not filled in</h3>
+    <p>Fill in your own TMDB API Key under "Basic Settings". The program pre-fills no Key and shares none.</p>
+    <h3>All network requests time out</h3>
+    <p>The proxy is off, or you entered <code>127.0.0.1</code>(the container's internal address). Change to the host's LAN IP and click "Test" to confirm.</p>
+    <h3>The gap number is absurdly large</h3>
+    <p>Check the "Data Update" page progress first: fetching is in<b>reverse-year order</b>, so 2026 must finish before 2025; years not yet reached show 0 releases. If a fetched year still looks large, that's normal - TMDB's basis includes shorts, TV movies and co-production double-counting; already <code>vote_count ≥ 1</code> filtered, but not identical to "worth-collecting feature films".</p>
+    <h3>Numbers don't match the TMDB site</h3>
+    <p>Normal. TMDB's <code>total_results</code> varies with filter parameters and the site has no "X Mandarin movies total" page; region / Mandarin basis are aggregated by this program; the list API hard-caps at <b>500 pages / 10,000 items</b>, so a single year+region over 10k gets truncated (the log notes it). To verify strictly, pick a narrow condition (e.g. "2023 / China / Drama") and compare against TMDB's returned total.</p>
+    <h3>Clicking play does nothing / keeps spinning</h3>
+    <ul>
+      <li>First check the "302 logs" for signing errors;</li>
+      <li>confirm all three read-only mounts (strm library, CD2 (<code>/CloudNAS</code>), media server database) are present in compose;</li>
+      <li>confirm the media server side treats EvoLink's 302 reverse-proxy entry as an "external/direct" address (don't let it go through a proxy again).</li>
+    </ul>
+    <h3>Comparison numbers don't match my library</h3>
+    <p>Most likely the media server database mounted only the main file, not the whole data directory (WAL trap), or "Index Emby" hasn't been run in a while. Remount the whole data directory and re-index once.</p>
+    <h3>Config/tasks lost after container restart</h3>
+    <p>Notes <code>/app/data</code> Not mounted. Check the host path of the data mount in compose and confirm config.json is <code>ls /app/data</code> visible inside the container.</p>
+    <h3>Cloud login keeps getting rate-limited</h3>
+    <p>Don't hammer Send Code; when you see a rate-limit notice, stop and wait a few minutes. Login state persists; log in once and it lasts.</p>
+    <h3>Settings revert after restart</h3>
+    <p>Fixed (atomic writes + rolling backups + self-healing on corruption). If still abnormal, first check whether the value in <code>data/config.bak.1.json</code> is complete.</p>
+    <h3>Mobile browser buttons blank / numbers overlap</h3>
+    <p>Fixed; refresh the page. If still old style, the browser cache hasn't updated; force-refresh or use a private window.</p>
+    <h3>RE0 can't find sources</h3>
+    <p>Use the "Test direct" in settings to pinpoint by stage: proxy exit / Cloudflare / login state / real lookup. All four green means the chain is fine, and RE0 simply doesn't have that title (common for obscure, new, or domestic shows).</p>
+
+    <h2 id="glossary">Glossary</h2>
+    <table>
+      <tr><th>Term</th><th>Meaning</th></tr>
+      <tr><td>Releases / target list</td><td>The list of films you want to collect (from TMDB / third-party JP metadata source / third-party anime metadata source) - the "answer key" for comparison</td></tr>
+      <tr><td>strm</td><td>A tiny pointer file of a few bytes that makes the media server treat a cloud file as a local movie</td></tr>
+      <tr><td>302 link swap</td><td>At playback, redirect the request to the cloud direct link; the media server relays nothing</td></tr>
+      <tr><td>Local mount mode</td><td>Follow the strm path prefix to the local CD2 to find the file, without scanning the whole drive</td></tr>
+      <tr><td>Weighted Dedup</td><td>When a title has multiple versions, score by attributes and keep only the best</td></tr>
+      <tr><td>Delete Linkage</td><td>When a title is deleted from the media library, also clean up its strm and empty folders</td></tr>
+      <tr><td>RE0 / fallback channel</td><td>An aggregated search service that looks up cloud resources by TMDB ID; each fills in their own channel address</td></tr>
+    </table>
+
+    <footer>EvoLink v1.0 · Local deployment docs · This page is product usage help, independent of any specific cloud drive / media server brand</footer>
+  </main>
+</div>
+<script>
+  const links=[...document.querySelectorAll('nav.toc a')];
+  const map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+  const obs=new IntersectionObserver(es=>{
+    es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.remove('active'));
+      const a=map.get(e.target.id); if(a)a.classList.add('active'); }});
+  },{rootMargin:'-10% 0px -80% 0px'});
+  document.querySelectorAll('main h2[id]').forEach(h=>obs.observe(h));
+</script>
+</body>
+</html>

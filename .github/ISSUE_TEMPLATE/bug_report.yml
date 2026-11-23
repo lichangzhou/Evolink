@@ -1,0 +1,57 @@
+name: Bug report
+description: Something does not work as expected
+title: "[bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. Please fill in what you can.
+
+        ⚠️ **Do not paste cookies, API keys or your `data/config.json` here.**
+        If a paste is unavoidable, replace every value with `***`.
+  - type: input
+    id: version
+    attributes:
+      label: EvoLink version
+      placeholder: "v1.2 / build 20261116.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: deploy
+    attributes:
+      label: Deployment
+      options:
+        - Docker Compose
+        - Docker run
+        - source
+      validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What did you expect, and what actually happened?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1.
+        2.
+        3.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      render: shell
+      description: "docker logs evolink --tail 100"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I removed all credentials from the log output above
+          required: true

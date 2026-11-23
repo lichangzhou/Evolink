@@ -1,0 +1,9 @@
+data/
+backup/
+dist/
+__pycache__/
+*.pyc
+*.bak
+.git/
+.gitignore
+docs/

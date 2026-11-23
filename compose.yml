@@ -1,0 +1,43 @@
+# ══════════════════════════════════════════════════════════════════
+# EvoLink · 极简安装（推荐所有人用这一份）
+#
+# 安装三步：
+#   1. 把本文件放到一个空目录（如 ~/evolink/），在该目录建一个 data 子目录；
+#   2. 只改下面 volumes 里两个【必填】挂载的左边路径（data 用默认 ./data 即可，
+#      另一个改成你存放 .strm 文件的实际目录）；
+#   3. 在当前目录执行：docker compose up -d
+#   然后浏览器打开 http://<NAS 的 IP>:9191
+#
+# 设计要点：
+#   - 代码、页面、依赖全部打包在镜像里，容器运行时不需要再挂任何源码文件；
+#   - 挂载只剩两类：核心必填（data + strm 库）和功能挂载（用得到才留）；
+#   - 302 换链要绑定宿主机端口，所以用 host 网络：
+#     9191 管理界面、8099 Jellyfin、8093 Emby、8092 Playable、32411 Plex。
+# ══════════════════════════════════════════════════════════════════
+services:
+  evolink:
+    image: lichangzhou/evolink:latest
+    container_name: evolink
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      TZ: "Asia/Shanghai"
+      # PUID / PGID 填宿主机上数据目录的属主，避免读写权限问题。
+      # 不确定的话在宿主机执行 `id -u` 和 `id -g` 查看（飞牛 NAS 通常是 1000 / 1001）。
+      PUID: "1000"
+      PGID: "1001"
+    volumes:
+      # 【必填】EvoLink 自己的配置、数据库、回收站（目录不存在会自动创建）
+      - ./data:/app/data
+      # 【必填】你的 strm 文件目录，改成自己 NAS 上的实际路径（容器内读写）
+      - /vol1/1000/Link:/app/Link
+
+      # ──────── 功能挂载：用不到对应功能时，把整行前面加 # 注释掉即可 ────────
+      # CloudDrive2 直链路径模式（strm 里写 /CloudNAS/... 路径）需要
+      - /vol1/1000/CloudNAS:/CloudNAS:shared
+      # 删除联动 Emby（删条目时自动清理 strm 并通知 Emby），要挂整个 data 目录（WAL）
+      - /vol1/1000/docker/Emby/data:/emby_data:ro
+      # Jellyfin 反代换算（按条目反查 strm 路径）
+      - /vol1/1000/docker/jellyfin/config/data:/jellyfin_data:ro
+      # Plex 反代换算
+      - /vol1/1000/docker/plex/config:/plex_data:ro
