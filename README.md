@@ -2,8 +2,8 @@
 
 # EvoLink
 
-### Media library gap analysis · 302 link swapping · strm orchestration
-#### for Emby / Jellyfin / Plex / Playable
+## Media library gap analysis · 302 link swapping · strm orchestration
+### for Emby / Jellyfin / Plex / Playable
 
 [English](README.md) · [简体中文](#中文摘要) · [国内版仓库](https://github.com/lichangzhou/EvoLink-CN)
 

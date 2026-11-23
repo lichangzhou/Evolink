@@ -83,7 +83,7 @@ python3 server.py
 
 > **Mount the whole `data` directory of Emby and Jellyfin, not just the main database file.**
 > Both use WAL mode; mounting only the main file gives you a stale snapshot.
-
+>
 > The same strm directory is mounted **twice** on purpose: read-only at `/Link` for the
 > proxy, read-write at `/app/Link` for the writers.
 
@@ -101,7 +101,7 @@ python3 server.py
 
 > EvoLink uses `network_mode: host`, so a `ports:` section has **no effect**. The service
 > binds the host port directly and the port has to be changed from the panel.
-
+>
 > The native Emby / Jellyfin / Plex containers already own their usual ports. EvoLink must
 > not occupy or modify them — only the reverse-proxy ports above belong to EvoLink.
 
