@@ -358,6 +358,27 @@ Point the verification at your own server with `EVOLINK_LICENSE_SERVER` or the
 
 ---
 
+## Reporting bugs and feedback
+
+**Found a bug? Please report it here — it goes straight to the maintainer:**
+
+| What you want to report | Where to open it |
+|---|---|
+| A bug or a crash | [Open a bug report](https://github.com/lichangzhou/Evolink/issues/new?template=bug_report.yml) |
+| A feature request | [Open a feature request](https://github.com/lichangzhou/Evolink/issues/new?template=feature_request.yml) |
+| Deployment questions / how-to | [Discussions](https://github.com/lichangzhou/Evolink/discussions) |
+| A pull request | [Compare & pull request](https://github.com/lichangzhou/Evolink/compare) |
+
+The bug template asks for the version, deployment method, host architecture and media
+server you are running against — fill those in, they are what makes a report
+actionable. General questions belong in Discussions rather than Issues, so bug reports
+stay readable.
+
+⚠️ **Never paste cookies, API keys, `data/config.json` or your `.strm` contents into an
+issue.** Redact them first.
+
+---
+
 ## Contributing
 
 Issues and pull requests are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for the
